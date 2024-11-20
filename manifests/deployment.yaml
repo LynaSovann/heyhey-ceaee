@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heyhey-ceaee-deployment
+  labels:
+    app: heyhey-ceaee
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heyhey-ceaee
+  template:
+    metadata:
+      labels:
+        app: heyhey-ceaee
+    spec:
+      containers:
+        - name: heyhey-ceaee-container
+          image: pipejet/heyhey-ceaee:latest
+          ports:
+            - containerPort: 3000
