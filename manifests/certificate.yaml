@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: heyhey-ceaee-certificate
+  namespace: heyhey-ceaee
+spec:
+  secretName: heyhey-ceaee-secret-tls
+  commonName: thanak81-heyhey.assessify.org
+  dnsNames:
+  - thanak81-heyhey.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
